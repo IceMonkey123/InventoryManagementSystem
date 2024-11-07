@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management</title>
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="stock.css">
+
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&display=swap">
+</head>
+<body>
+
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <i class="ri-cloud-fill"></i>
+                <span>IMS</span>
+            </a>
+            <button class="header__toggle" id="header-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+    </header>
+
+    <!--=============== SIDEBAR ===============-->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar__container">
+            <!-- Sidebar User Info Section -->
+            <div class="sidebar__user">
+                <div class="sidebar__img">
+                    <img src="icon.png" alt="User Profile Image">
+                </div>
+
+                <div class="sidebar__info">
+                    <h3>Lakin, Ben A.</h3>
+                    <span>lakinben26@gmail.com</span>
+                </div>
+            </div>
+
+            <!-- Navigation Section -->
+            <div>
+                <h3 class="sidebar__title">MANAGE</h3>
+                <div class="sidebar__list">
+                    <a href="index.html" class="sidebar__link">
+                        <i class="ri-pie-chart-2-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="stock.html" class="sidebar__link active-link">
+                        <i class="ri-wallet-3-fill"></i>
+                        <span>Stock</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--=============== MAIN ===============-->
+    <main class="main container" id="main">
+        <h1>Manage Stock</h1>
+
+        <div class="stock-container">
+            <h2>Enter Stock Details</h2>
+
+            <div class="stock-actions">
+                <div>
+                    <label for="itemName">Item Name:</label>
+                    <input type="text" id="itemName">
+                </div>
+
+                <div>
+                    <label for="warehouseStockIn">Warehouse Stock In:</label>
+                    <input type="number" id="warehouseStockIn" min="" value="">
+                </div>
+
+                <div>
+                    <label for="storeStockIn">Store Stock In:</label>
+                    <input type="number" id="storeStockIn" min="" value="">
+                </div>
+
+                <div>
+                    <label for="stockOutWarehouse">Stock Out Warehouse:</label>
+                    <input type="number" id="stockOutWarehouse" min="" value="">
+                </div>
+
+                <div>
+                    <label for="stockOutStore">Stock Out Store:</label>
+                    <input type="number" id="stockOutStore" min="" value="">
+                </div>
+
+                <button onclick="saveTransaction()">Save Transaction</button>
+            </div>
+        </div>
+    </main>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="stock.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
